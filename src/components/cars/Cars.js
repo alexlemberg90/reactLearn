@@ -9,7 +9,7 @@ export default function Cars() {
 
     useEffect(() => {
         getCar().then(value => setCars([...value]))
-    })
+    },[])
   return (
     <div>
         <CreateCar/>
