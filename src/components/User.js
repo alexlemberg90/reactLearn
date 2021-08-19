@@ -1,7 +1,11 @@
+import '../App.css';
+
 export default function User({user}) {
   return (
     <div>
-    Name - {user.name}<br/>
+        ID - {user.id}<br/>
+        Name - {user.name}<br/>
+        Email - {user.email}
 
     </div>
   );

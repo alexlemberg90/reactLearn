@@ -11,7 +11,7 @@ export default function Comments() {
   },[])
 
   return (
-    <div>
+    <div className={'item'}>
       {
         comments.map(comment => <Comment key={comment.id} comment={comment}/>)
       }

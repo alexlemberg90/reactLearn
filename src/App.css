@@ -1,0 +1,20 @@
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.main a {
+    border: thick double #32a1ce;
+    text-decoration: none;
+}
+.item {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.item div {
+    width: 40%;
+    border: 4mm ridge rgba(100, 150, 120, .6);
+    margin: 5px;
+    text-align: center;
+}

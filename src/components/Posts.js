@@ -11,7 +11,7 @@ export default function Posts() {
   },[]);
 
   return (
-    <div>
+    <div className={'item'}>
       {
         posts.map(post => <Post key={post.id} post={post}/>)
       }

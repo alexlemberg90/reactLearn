@@ -8,10 +8,10 @@ export default function Users() {
 
   useEffect(() => {
     getUsers().then(value => setUsers([...value]))
-  },[])
-  console.log(users)
+  },[]);
+
   return (
-    <div>
+    <div className={'item'}>
       {
         users.map(user => <User key={user.id} user={user}/>)
       }

@@ -1,7 +1,8 @@
 export default function Post({post}) {
   return (
     <div>
-    Title - {post.title};<br/>
+    <b>TITLE</b><br/> <i>{post.title}</i><br/>
+    <b>BODY</b> <br/> {post.body};
 
     </div>
   );

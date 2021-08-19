@@ -9,9 +9,12 @@ function App() {
   return (
       <Router>
         <div>
-            <Link to={'/users'}> All Users</Link><br/>
-            <Link to={'/posts'}> All Posts</Link><br/>
-            <Link to={'/comments'}> All Comments</Link>
+            <div className={'main'}>
+                <Link to={'/users'}> All Users</Link><br/>
+                <Link to={'/posts'}> All Posts</Link><br/>
+                <Link to={'/comments'}> All Comments</Link>
+            </div>
+
 
             <Route path={'/users'} render={() => <Users/>}/>
             <Route path={'/posts'} render={() => <Posts/>}/>
