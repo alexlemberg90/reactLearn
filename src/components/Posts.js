@@ -4,7 +4,7 @@ import Post from "./Post";
 
 export default function Posts() {
 
-  let [posts, setPost] = useState([]);
+  const [posts, setPost] = useState([]);
 
   useEffect(() => {
     getPosts().then(value => setPost([...value]));
