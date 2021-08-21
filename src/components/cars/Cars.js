@@ -5,16 +5,22 @@ import {getCar} from "../../services/car.service";
 
 export default function Cars() {
 
-    let [cars, setCars] = useState([]);
+    const [cars, setCars] = useState([]);
+    let [oneCar, setOneCars] = useState({});
 
     useEffect(() => {
         getCar().then(value => setCars([...value]))
     },[cars])
-  return (
+
+    const edit = (car) => {
+        setOneCars(car)
+    }
+
+    return (
     <div>
-        <CreateCar/>
+        <CreateCar oneCar={oneCar}/>
         {
-            cars.map(car => <Car key={car.id} car={car}/>)
+            cars.map(car => <Car key={car.id} car={car} edit={edit}/>)
         }
 
     </div>
