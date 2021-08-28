@@ -10,6 +10,7 @@ export default function Cars() {
 
     useEffect(() => {
         getCar().then(value => setCars([...value]))
+
     },[cars])
 
     const edit = (car) => {

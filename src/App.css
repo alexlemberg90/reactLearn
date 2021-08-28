@@ -1,0 +1,17 @@
+.postName {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.post {
+    width: 45%;
+    justify-content: flex-start;
+}
+.postDetail {
+    width: 45%;
+    justify-content: flex-end;
+}
+.linka {
+
+}
