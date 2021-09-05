@@ -2,27 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {createStore} from "redux";
 import {Provider} from "react-redux";
+import {store} from "./redux/store";
+import {BrowserRouter as Router} from 'react-router-dom'
 
-const movieReducer = (state = {movie:[]}, action) => {
-    switch (action.type) {
-        case 'GET_MOVIE':
-            console.log(action.payload)
-
-            return {...state, movie: [...action.payload]};
-
-        default:
-            return state;
-    }
-}
-
-const store = createStore(movieReducer)
 
 ReactDOM.render(
   <React.StrictMode>
       <Provider store={store}>
-          <App />
+          <Router>
+              <App />
+          </Router>
       </Provider>
   </React.StrictMode>,
   document.getElementById('root')

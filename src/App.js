@@ -1,24 +1,29 @@
 import './App.css';
-import {useEffect} from "react";
-import {moviesService} from "./services";
-import {useDispatch, useSelector} from "react-redux";
+import {Route, Switch, useHistory} from "react-router-dom";
+import {Baselayout} from "./components";
+import Main from "./components/main/Main";
+import Movie from "./components/movies/Movie";
 
 
 function App() {
-  const  state = useSelector(state => state);
-  const dispatch = useDispatch();
-
-  useEffect(() => {
-    moviesService.getMovies().then(value => dispatch({type: 'GET_MOVIE', payload: value}))
-    console.log(state)
-  },[dispatch,state])
-
+  const history = useHistory()
   return (
-    <div>
-      {
-        // state.map((value) => <div>{value.result}</div>)
-      }
-    </div>
+      <Baselayout>
+        <Switch>
+          <Route path="/" exact>
+            <Main />
+          </Route>
+          <Route path="/movie/:id" exact>
+            <Movie/>
+          </Route>
+          <Route>
+            <h1>PAGE NOT FOUND <button onClick={()=>{
+              history.push('/')}
+            }>home page</button></h1>
+          </Route>
+
+        </Switch>
+      </Baselayout>
   );
 }
 
