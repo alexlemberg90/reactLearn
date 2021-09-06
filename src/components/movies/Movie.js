@@ -1,7 +1,7 @@
 import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {moviesService} from "../../services";
-import '../additionalСomponent/Star.css'
+import {MainStars} from "../additionalСomponent";
 
 export default function Movie() {
 
@@ -20,10 +20,9 @@ export default function Movie() {
         <div>
           <h2>{filmDetails.original_title}</h2>
           <h3>Genres: {filmDetails.genres.map(({name, id}) => <span key={id}>{name} </span>)} </h3>
-          <span>Rating:{filmDetails.vote_average} (total vote: {filmDetails.vote_count})</span>
+          <span>Rating:<MainStars key={filmDetails.id} vote={filmDetails.vote_average}/>(total vote: {filmDetails.vote_count})</span>
           <p>{filmDetails.overview}</p>
           <span>Release date:{filmDetails.release_date}</span>
-            <hr/>
 
         </div>
       </div> )
