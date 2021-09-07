@@ -121,7 +121,7 @@ class WidgetRatings extends React.Component {
                 svg
             } = child.props;
 
-            const widgetRating = index + 1;
+            const widgetRating = index - 1;
             const isSelected = widgetRating <= selectedRating;
 
             // hovered only matters when changeRating is true

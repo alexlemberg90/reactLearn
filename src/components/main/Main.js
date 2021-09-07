@@ -34,7 +34,6 @@ export default function Main() {
   },[dispatch]);
 
   const onFilmClick = (film) => {
-    console.log(film)
     history.push(`/movie/${film.id}`)
   }
 
