@@ -1,0 +1,3 @@
+const GET_MOVIE = 'GET_MOVIE';
+const GET_GENRES = 'GET_GENRES';
+export {GET_MOVIE, GET_GENRES}
