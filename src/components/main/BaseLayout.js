@@ -1,6 +1,7 @@
 import React from "react";
-import styles from './BaseLoyout.module.css'
+import styles from './BaseLoyout.module.css';
 import {useHistory} from "react-router-dom";
+import logo from '../../images/main.png';
 
 export const Baselayout = ({children}) =>{
 
@@ -12,7 +13,7 @@ export const Baselayout = ({children}) =>{
 
     return (
         <div className={styles.mainWrapper}>
-            <header>header <button className={'mainButton'} onClick={() => toHome()}>Home Page</button></header>
+            <header><img className={'mainImg'} onClick={toHome} src={logo} alt={'main logo'}/></header>
             {/*<Themes/>*/}
             <main>
                 {children}

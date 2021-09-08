@@ -17,6 +17,7 @@ main {
 header {
     background-color: darkred;
     padding: 10px 20px;
+    text-align: center;
 }
 footer {
     background-color: darkred;
