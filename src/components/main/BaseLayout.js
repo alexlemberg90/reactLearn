@@ -12,7 +12,7 @@ export const Baselayout = ({children}) =>{
 
     return (
         <div className={styles.mainWrapper}>
-            <header>header <button onClick={() => toHome()}>To Home Page</button></header>
+            <header>header <button className={'mainButton'} onClick={() => toHome()}>Home Page</button></header>
             {/*<Themes/>*/}
             <main>
                 {children}

@@ -14,11 +14,11 @@ export default function Movie() {
   },[filmDetails, id]);
 
   return (
-      ( filmDetails != null && <div>
+      ( filmDetails != null && <div className={'movie'}>
         <div>
           <img src={`https://image.tmdb.org/t/p/w500${filmDetails.poster_path}`} alt={`${filmDetails.original_title} poster`}/>
         </div>
-        <div>
+        <div className={"textMovie"}>
           <h2>{filmDetails.original_title}</h2>
           <h3>Genres: {filmDetails.genres.map(({name, id}) => <Button outline color="success" key={id}>{name}</Button>)} </h3>
           <span>Rating:  <b>{filmDetails.vote_average}</b><MainStars key={filmDetails.id} vote={filmDetails.vote_average}/>(total vote: {filmDetails.vote_count})</span>
