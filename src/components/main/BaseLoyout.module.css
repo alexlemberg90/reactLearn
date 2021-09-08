@@ -15,9 +15,11 @@ main {
     overflow-y: auto;
 }
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: darkred;
     padding: 10px 20px;
-    text-align: center;
 }
 footer {
     background-color: darkred;

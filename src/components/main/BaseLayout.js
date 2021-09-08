@@ -2,6 +2,7 @@ import React from "react";
 import styles from './BaseLoyout.module.css';
 import {useHistory} from "react-router-dom";
 import logo from '../../images/main.png';
+import DropMenu from "../additionalСomponent/dropdown/DropMenu";
 
 export const Baselayout = ({children}) =>{
 
@@ -13,7 +14,11 @@ export const Baselayout = ({children}) =>{
 
     return (
         <div className={styles.mainWrapper}>
-            <header><img className={'mainImg'} onClick={toHome} src={logo} alt={'main logo'}/></header>
+            <header>
+                <DropMenu/>
+                <img className={'mainImg'} onClick={toHome} src={logo} alt={'main logo'}/>
+                <div>Finder</div>
+            </header>
             {/*<Themes/>*/}
             <main>
                 {children}

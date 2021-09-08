@@ -18,7 +18,7 @@ export default function Main() {
 
   const dispatch = useDispatch();
 
-  const mergedGenresMovies = movies.map((movie) => {
+   const mergedGenresMovies = movies.map((movie) => {
     const {genre_ids} = movie;
     const movieGenresList = genre_ids.map(genreId => genres.find(el => el.id === genreId))
 

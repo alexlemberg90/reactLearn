@@ -1,7 +1,6 @@
 import {MainStars} from "../additionalСomponent";
 import {Button, Card, CardBody, CardImg, CardSubtitle, CardText, CardTitle} from "reactstrap";
 
-
 export default function Movies({value: movies, onFilmClick}) {
 
   const {original_title, overview, release_date, vote_average, vote_count, poster_path, movieGenresList, id} = movies;
