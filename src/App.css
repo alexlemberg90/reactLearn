@@ -1,0 +1,19 @@
+.mainMovies {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.movies {
+    width: 25%;
+}
+.movie {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.textMovie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -38,7 +38,7 @@ export default function Main() {
   }
 
   return (
-      <div>
+      <div className={'mainMovies'}>
         {
           mergedGenresMovies.map((value) => <Movies onFilmClick={onFilmClick} key={value.id} value={value}/>)
         }
