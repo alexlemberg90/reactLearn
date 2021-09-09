@@ -18,7 +18,7 @@ export default function Main() {
 
   const dispatch = useDispatch();
 
-  const mergedGenresMovies = movies.map((movie) => {
+   const mergedGenresMovies = movies.map((movie) => {
     const {genre_ids} = movie;
     const movieGenresList = genre_ids.map(genreId => genres.find(el => el.id === genreId))
 
@@ -34,13 +34,16 @@ export default function Main() {
   },[dispatch]);
 
   const onFilmClick = (film) => {
-    history.push(`/movie/${film.id}`)
+    history.push(`/movies/${film.id}`)
   }
+    const onGenreFilmClick = (id) => {
+        history.push(`/genresMovie/${id}`)
+    }
 
   return (
       <div className={'mainMovies'}>
         {
-          mergedGenresMovies.map((value) => <Movies onFilmClick={onFilmClick} key={value.id} value={value}/>)
+          mergedGenresMovies.map((value) => <Movies onFilmClick={onFilmClick} onGenreFilmClick={onGenreFilmClick} key={value.id} value={value}/>)
         }
       </div>
   );
