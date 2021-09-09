@@ -19,11 +19,10 @@ export const Baselayout = ({children}) =>{
                 <img className={'mainImg'} onClick={toHome} src={logo} alt={'main logo'}/>
                 <div>Finder</div>
             </header>
-            {/*<Themes/>*/}
             <main>
                 {children}
             </main>
-            <footer>footer</footer>
+            <footer className={'pages'}>pages</footer>
         </div>
     )
 }
